@@ -1,4 +1,12 @@
-export const App = () => {
+// import {useState,useEffect} from "react";
+import { ContactList } from "./ContactList";
+import { Filter } from "./Filter";
+import { ContactForm } from "./Form";
+import css from './Phonebook.module.css'
+
+
+export function App() {
+
   return (
     <div
       style={{
@@ -10,7 +18,16 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <div>
+      <h1 className={css.title}>Phonebook</h1>
+        <ContactForm />
+      
+        <h2 className={css.title}>Contacts</h2>
+        <Filter />
+        <ContactList/>
+        
+        
+      </div>  
     </div>
-  );
-};
+  )
+}
